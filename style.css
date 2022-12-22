@@ -225,3 +225,7 @@ h5 {
     width: 100%;
   }
 }
+.page_logo {
+  text-decoration: none;
+  color: white;
+}
