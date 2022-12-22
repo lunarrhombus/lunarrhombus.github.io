@@ -29,7 +29,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ccc;
+  color: #f8333c;
 }
 
 main {
@@ -157,8 +157,10 @@ footer {
   -moz-columns: 2;
 }
 .projects_links:hover {
-  color: #4b4a67;
-  font-size: 1.25rem;
+  color: #006699;
+}
+.projects_links:visited {
+  color: #006699;
 }
 .xp-section {
   display: flex;
@@ -228,4 +230,12 @@ h5 {
 .page_logo {
   text-decoration: none;
   color: white;
+}
+.page_logo:visited {
+  text-decoration: none;
+  color: white;
+}
+.page_logo:hover {
+  text-decoration: none;
+  color: #16302b;
 }
