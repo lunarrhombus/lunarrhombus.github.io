@@ -239,10 +239,3 @@ h5 {
   text-decoration: none;
   color: #16302b;
 }
-header,
-nav {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  text-align: center;
-}
