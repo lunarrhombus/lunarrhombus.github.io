@@ -130,6 +130,11 @@ footer {
   -webkit-columns: 3;
   -moz-columns: 3;
 }
+.projects_links_main {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
 
 .about-section {
   display: flex;
