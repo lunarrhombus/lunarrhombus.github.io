@@ -1,249 +1,42 @@
-/* * {
-  border: red dotted 1px;
-} */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #cccccc;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav {
-  display: flex;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 10px;
-}
-
-nav a:hover {
-  color: #f8333c;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-section h2 {
-  margin-top: 0;
-  color: #333;
-}
-
-section ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-section li {
-  margin-bottom: 10px;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Use a less bright color scheme */
-
-header {
-  background-color: #006699;
-}
-
-section h2 {
-  border-bottom: 1px solid #006699;
-}
-
-section ul li::before {
-  content: "•";
-  color: #006699;
-  margin-right: 10px;
-}
-
-section ul li {
-  display: flex;
-  align-items: center;
-}
-
-section ul li h3 {
-  font-size: 18px;
-  color: #006699;
-  margin: 0;
-}
-
-section ul li p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  margin-left: 20px;
-  text-align: right;
-}
-
-footer {
-  background-color: #006699;
-}
-
 .Mohamed_social {
-  display: block;
-  padding: 7px;
-  font-size: 14px;
-  margin: 0;
-  background: #eef0f2;
-  color: #000;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  border-top-left-radius: 12px;
-  /* border-bottom-left-radius: 12px; */
-  z-index: 100;
-  font-weight: bold;
-  text-decoration: none;
+    display: block;
+    padding: 7px;
+    font-size: 14px;
+
+    margin: 0;
+    background: #eef0f2;
+    color: #000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 12px;
+    /* border-bottom-left-radius: 12px; */
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
 }
 .social {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  /* width: 40px; */
 }
-.skills {
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
+#btn-back-to-top {
+  position: fixed;
+  bottom: 2.5%;
+  right: 50%;
+  display: none;
+  /* border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%; */
 }
-.projects_links_main {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+#conehover {
+visibility: hidden;
+display: relative;
 }
+.bi-cone-striped:hover ~ #conehover {
+  
+visibility: visible;
 
-.about-section {
-  display: flex;
-}
-
-.about-text {
-  flex: 60%;
-  /* border: red dotted; */
-  font-size: 1.15rem;
-}
-
-.about-image {
-  flex: 1;
-  text-align: right;
-}
-
-.about-image img {
-  width: 150px;
-  height: auto;
-  border-radius: 20%;
-}
-.interests {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-}
-.projects_links:hover {
-  color: #006699;
-}
-.projects_links:visited {
-  color: #006699;
-}
-.xp-section {
-  display: flex;
-}
-.xp-header {
-  flex: 1;
-}
-.xp-text {
-  flex: 2;
-}
-.xp-text p {
-  font-size: 1.09rem;
-  text-align: justify;
-}
-h5 {
-  flex: 0.55;
-  position: relative;
-}
-#blog {
-  background-color: #fff;
-  padding: 20px;
-}
-
-#blog h2 {
-  margin-top: 0;
-  color: #333;
-}
-
-.blog-posts {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.blog-post {
-  width: 50%;
-  padding: 20px;
-}
-
-.blog-post h3 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.blog-post p {
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.blog-post .read-more {
-  display: block;
-  margin-top: 20px;
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.blog-post .read-more:hover {
-  color: #00b0ff;
-}
-
-@media (max-width: 600px) {
-  .blog-post {
-    width: 100%;
-  }
-}
-.page_logo {
-  text-decoration: none;
-  color: white;
-}
-.page_logo:visited {
-  text-decoration: none;
-  color: white;
-}
-.page_logo:hover {
-  text-decoration: none;
-  color: #16302b;
 }
