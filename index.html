@@ -1,249 +1,424 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Abuzaid</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=2, maximum-scale=1.0, user-scalable=no"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>
-        <a class="page_logo" href="https://lunarrhombus.github.io/"
-          >Mohamed Abuzaid</a
-        >
-      </h1>
-      <nav class="nav-links">
-        <a class="nav-toggle" href="#about">About</a>
-        <a class="nav-toggle" href="#experience">Experience</a>
-        <a class="nav-toggle" href="#education">Education</a>
-        <a class="nav-toggle" href="#skills">Skills</a>
-        <a class="nav-toggle" href="#languages">Languages</a>
-        <a class="nav-toggle" href="#projects">Side Projects</a>
-        <a class="nav-toggle" href="#interests">Interests</a>
-        <!-- <a class="nav-toggle" href="/blog.html">Blog</a> -->
-      </nav>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Mohamed Abuzaid</span>
+      </a>
+
+      <ul class="nav nav-pills">
+
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+        <li class="nav-item"><a href="/side_projects.html" class="nav-link">Side Projects</a></li>
+        <li class="nav-item"><a href="#interests" class="nav-link">Interests</a></li>
+        <!-- <li class="nav-item"><a href="/blog.html" class="nav-link active" aria-current="page">Blog</a></li> -->
+
+      </ul>
     </header>
-    <script>
-      const navToggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelectorAll(".nav-links");
+    </div>
 
-      navToggle.addEventListener("click", () => {
-        navLinks.forEach((link) => {
-          link.classList.toggle("open");
-        });
-      });
-    </script>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <div class="about-section">
-          <div class="about-text">
-            <p>
-              Dedicated Systems Engineer, with abundant experience in propulsion
-              research, complex problem-solving, model-based systems
-              engineering, software engineering, entrepreneurship, aerospace
-              systems, and mechanical engineering. Flexible and cooperates well
-              with multi-discipline teams. Multiple leadership experiences.
-            </p>
+    <!-- Hero Section - About -->
+        <div id = "about" class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/Images/MZA.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  height="200" loading="lazy" style="border-radius: 10%;">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">A little about me</h1>
+                <p class="lead">I'm an aerospace engineer specializing in propulsion and systems, with a keen interest in startups, AI, and IoT. Alongside my professional role, I embrace my entrepreneurial spirit, constantly seeking new opportunities to apply emerging technologies. My current focus is on developing a universal modular IoT startup, while also exploring various SaaS projects in my spare time. </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="about-image">
-            <img src="/img/pic.jpg" alt="Profile Picture" />
+
+
+
+    <!-- Experience -->
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 id="experience" class="pb-2 border-bottom">Experience</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/Images/SLS.jpeg'); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Space Launch System</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Systems Engineer</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>2.5 Years</small>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="xp-section">
-          <ul>
-            <!-- <li>
-              <h3 class="xp-header">CEO / Lead Engineer</h3>
-              <h5>Second Sun Labs</h5>
-              <div class="xp-text">
-                <p>
-                  Lead the engineering and design of modular IoT and data
-                  acquisition hardware for almost all applications.
-                </p>
-              </div>
-            </li> -->
-            <li>
-              <h3 class="xp-header">Systems Engineer II</h3>
-              <h5>The Boeing Company</h5>
-              <div class="xp-text">
-                <p>
-                  The development of detailed verification objectives (DVOs) and
-                  interface control documents (ICDs) to describe how components
-                  interact and connect per NASA specifications and technical
-                  analysis.
-                </p>
-              </div>
-            </li>
-            <li>
-              <h3 class="xp-header">Graduate Researcher</h3>
-              <h5>Pennsylvania State University</h5>
-              <div class="xp-text">
-                <p>
-                  This NASA funded project is attempting to replace
-                  cancer-causing corrosive auxiliary power units of F-15
-                  aircraft with safer water-based propellants using microwave
-                  radiation as an ignition source.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <h3 class="xp-header">Lead Technical Intern</h3>
-              <h5>Pennsylvania State University</h5>
-              <div class="xp-text">
-                <p>
-                  Developed a serial terminal to collect, manipulate, and store
-                  data as a text file or spreadsheets.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <h3>DevOps Certificate</h3>
-            <p>Codecademy</p>
-          </li>
-          <li>
-            <h3>Full-Stack Web Development Certificate</h3>
-            <p>Codecademy</p>
-          </li>
-          <li>
-            <h3>90% Master's Degree in Aerospace Engineering</h3>
-            <p>Pennsylvania State University</p>
-          </li>
-          <li>
-            <h3>Bachelor's Degree in Aerospace Engineering</h3>
-            <p>Pennsylvania State University</p>
-          </li>
-        </ul>
-      </section>
-            <section id="skills">
-        <h2>Skills</h2>
-        <h4>
-          <ul class="skills">
-            <li>Rational DOORs</li>
-            <li>SolidWorks</li>
-            <li>Star CCM+</li>
-            <li>Simulink</li>
-            <li>MBSE</li>
-            <li>COMSOL</li>
-            <li>Cameo</li>
-            <li>Fusion 360</li>
-            <li>AutoCAD</li>
-            <li>Additive Manufacturing</li>
-            <li>AI Prompt Engineering</li>
-          </ul>
-        </h4>
-      </section>
-            <section id="languages">
-        <h2>Languages</h2>
-        <h4>
-          <ul class="skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>SQL</li>
-            <li>C++</li>
-            <li>React</li>
-            <li>MATLAB</li>
-            <li>DXL</li>
-            <li>Python</li>
-          </ul>
-        </h4>
-      </section>
-      <section id="projects">
-        <h2>Side Projects</h2>
-        <ul class="projects_links_main">
-          <li>
-            <h3>
-              <a class="projects_links" href="https://taptekk.com/">TapTekk.com</a>
-              - Defunct
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <a class="projects_links" href="#projects"
-                >Newssum.io - Coming Soon</a
-              >
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <a class="projects_links" href="#projects"
-                >ICDGenerator - Coming Soon</a
-              >
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <a class="projects_links" href="https://secondsunlabs.com/"
-                >Second Sun Laboratories Corporation</a
-              >
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <a class="projects_links" href="https://flexaero.io/"
-                >FlexAero.io</a
-              >
-              - Defunct
-            </h3>
-          </li>
-          <li>
-            <h3>
-              <a class="projects_links" href="https://kardashv.space/"
-                >Kardashv.Space</a
-              >
-              - Defunct
-            </h3>
-          </li>
-        </ul>
-      </section>
-      <section id="interests">
-        <h2>Interests</h2>
-        <ul class="interests">
-          <li><h3>Aeronautics</h3></li>
-          <li><h3>Astronautics</h3></li>
-          <li><h3>Startups / Entrepreneurship</h3></li>
-          <li><h3>Web Development</h3></li>
-          <li><h3>AI</h3></li>
-          <li><h3>Fitness</h3></li>
-          <li><h3>IoT</h3></li>
-          <li><h3>Data Acquisition Hardware</h3></li>
-          <li><h3>Plasma Physics</h3></li>
-          <li><h3>Nuclear Energy (Fission / Fusion)</h3></li>
-          <li><h3>Additive Manufacturing (3D Printing)</h3></li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>Copyright 2022, Built with GPT3.</p>
-      <div class="Mohamed_social">
-        <a target="_blank" href="https://github.com/lunarrhombus">
-          <img class="social" src="/img/github.png" alt="github logo"
-        /></a>
-        <a target="_blank" href="https://twitter.com/MZAbuzaid">
-          <img class="social" src="/img/twitter.png" alt="twitter logo"
-        /></a>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/mohamed-abuzaid-55350094/"
-        >
-          <img class="social" src="/img/linkedin.png" alt="linkedin logo"
-        /></a>
       </div>
-    </footer>
-  </body>
+
+            <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/Images/Plane.png'); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Air Force Aircraft</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Systems Engineer</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>5 Months</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/Images/BCA.jpeg'); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Commercial Aircraft</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Systems Engineer</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>5 Months</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/Images/DUST.jpeg'); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Data Acquisition</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <small>Technical Intern</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>2 Years</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+
+<div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom" id="education">Education</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+
+        </div>
+        <div>
+          <h3 class="fs-2 text-body-emphasis">B.S Aerospace Engineering</h3>
+          <h5 class="fs-5 text-body-emphasis">Penn State University</h5>
+          <p>May 2018<br>Minor: Information, Science & Technology for Aerospace Engineers</p>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Skills -->
+
+<div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom" id="skills">Skills</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Rational DOORs</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">MBSE</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">SolidWorks</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">COMSOL</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Additive Manufacturing</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Cameo</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Star CCM+</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Fusion 360</h3>
+
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Simulink</h3>
+
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Catia</h3>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <div class="container">
+    <h2 class="pb-2 border-bottom" id="languages">Languages</h2>
+<div class="d-flex gap-2 justify-content-center py-5">
+  <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" alt="">&nbsp C++ &nbsp
+  </span>
+
+    <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">&nbsp Javascript &nbsp
+  </span>
+
+    <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">&nbsp CSS &nbsp
+  </span>
+
+      <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">&nbsp HTML &nbsp
+  </span>
+
+      <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">&nbsp PHP &nbsp
+  </span>
+
+      <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">&nbsp SQL &nbsp
+  </span>
+
+      <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="">&nbsp MatLab &nbsp
+  </span>
+
+      <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="" height="50" src="/Images/Icons/ibm-doors-min.png" alt="">&nbsp DXL &nbsp
+  </span>
+
+      <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill" style="font-size: 1.25rem;">
+    <img class="rounded-circle me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">&nbsp Python &nbsp
+  </span>
+</div>
+</div>
+  <!-- Side Projects - Recommend being on second page -->
+
+  <!-- Interests -->
+<div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom" id="interests">Interests</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Aeronautics & Astronautics</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Internet of Things</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Startups / Entrepreneurship</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Data Acquisition Hardware</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Plasma Physics</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Nuclear Energy (Fission / Fusion)</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Additive Manufacturing (3D Printing)</h3>
+
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Fitness</h3>
+
+        </div>
+      </div>
+
+            <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Artificial intelligence</h3>
+
+        </div>
+      </div>
+            <div class="col d-flex align-items-start">
+        
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Web Development</h3>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <div class="container">
+  <footer class="py-5">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2023 Mohamed Abuzaid. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+  <!-- Back to the top -->
+
+        <button
+                type="button"
+                class="btn btn-danger btn-floating btn-lg"
+                id="btn-back-to-top"
+                >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg>
+        </button>
+
+        <!-- Explanation -->
+
+        <script>
+            //Get the button
+            let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+              scrollFunction();
+            };
+
+            function scrollFunction() {
+              if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+              ) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+
+      </script>
+
+  <!-- Socials -->
+      <div class="Mohamed_social">
+            <a target="_blank" href="https://github.com/lunarrhombus">
+              <img class="social" src="/Images/github.png" alt="github logo"></a>
+            <a target="_blank" href="https://twitter.com/MZAbuzaid">
+              <img class="social" src="/Images/twitter.png" alt="twitter logo"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/mohamed-abuzaid-55350094/">
+              <img class="social" src="/Images/linkedin.png" alt="linkedin logo"></a>
+      </div>
+</body>
 </html>
