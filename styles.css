@@ -40,3 +40,38 @@ display: relative;
 visibility: visible;
 
 }
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.scroll-content {
+  display: flex;
+  animation: scroll-horizontal 30s linear infinite; /* Scroll smoothly for 30s, adjust time as needed */
+}
+
+/* Individual badge styles */
+.badge {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 1.25rem;
+}
+
+/* Keyframes for continuous horizontal scrolling */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0); /* Start from the original position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by 50% of the total content width */
+  }
+}
+
+/* Duplicate the content dynamically */
+.scroll-content::before {
+  content: '';
+  display: inline-block;
+  width: 100%; /* Duplicate the entire content */
+}
