@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog</title>
+
+  <!-- Bootstrap & your CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Marked (markdown → HTML) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- ── NAV (same as before, shorten for brevity) ───────────────────────────── -->
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-4">Mohamed Abuzaid</span>
+      </a>
+
+      <ul class="nav nav-pills justify-content-center">
+
+        <li class="nav-item"><a href="/index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/index.html#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="/index.html#" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="/index.html#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="/index.html#languages" class="nav-link">Languages</a></li>
+        <li class="nav-item"><a href="/side_projects.html" class="nav-link">Side Projects</a></li>
+        <li class="nav-item"><a href="/index.html#interests" class="nav-link">Interests</a></li>
+        <!-- <li class="nav-item"><a href="/blog.html" class="nav-link active" aria-current="page">Blog</a></li> -->
+
+      </ul>
+    </header>
+    </div>
+
+  <!-- ── POST CONTENT ────────────────────────────────────────────────────────── -->
+  <main id="post" class="flex-grow-1 container py-2">
+    <!-- populated by JS -->
+    <h1 id="post-title" class="fw-bold display-5"></h1>
+    <article id="post-body" class="fs-5 lh-lg"></article>
+    <a href="/blog.html" class="btn btn-outline-light btn-sm mt-4">&larr; Back to Blog</a>
+  </main>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────────── -->
+  <footer class="container border-top py-4 mt-auto">
+    <p class="mb-0">© 2025 Mohamed Abuzaid. All rights reserved.</p>
+  </footer>
+
+  <!-- ── SCRIPT: fetch & render markdown ─────────────────────────────────────── -->
+  <script>
+    // helper to read ?post=filename from the URL
+    const params = new URLSearchParams(window.location.search);
+    const file   = params.get('post') || '';        // e.g. my-post.md
+
+    if (!file) {
+      document.getElementById('post-body').innerHTML =
+        '<p class="text-danger">No post specified. Use <code>?post=your-file.md</code>.</p>';
+    } else {
+      fetch('/posts/' + file)
+        .then(r => r.ok ? r.text() : Promise.reject('Not found'))
+        .then(md => {
+          // first heading line => title
+          const firstLine  = md.split(/\\r?\\n/)[0];
+          const matchTitle = firstLine.match(/^#\\s+(.+)/);
+          if (matchTitle) {
+            document.title           = matchTitle[1] + ' · Blog';
+            document.getElementById('post-title').textContent = matchTitle[1];
+            md = md.replace(firstLine, '');           // drop first heading from body
+          }
+
+          document.getElementById('post-body').innerHTML = marked.parse(md);
+        })
+        .catch(err => {
+          document.getElementById('post-body').innerHTML =
+            '<p class="text-danger">Error loading post: ' + err + '</p>';
+        });
+    }
+  </script>
+</body>
+</html>
