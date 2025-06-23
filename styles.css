@@ -42,8 +42,9 @@ visibility: visible;
 }
 
 .scroll-container {
-  width: 100%;
-  overflow: hidden; /* Hide any overflow content */
+  display:flex;
+  width:max-content;           /* grow to fit badges ×2 */
+  animation: marquee 25s linear infinite;
 }
 
 .scroll-content {
@@ -59,15 +60,13 @@ visibility: visible;
   font-size: 1.25rem;
 }
 
-/* Keyframes for continuous horizontal scrolling */
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0); /* Start from the original position */
-  }
-  100% {
-    transform: translateX(-50%); /* Move left by 50% of the total content width */
-  }
+@keyframes marquee{
+  from{transform:translateX(0);}
+  to  {transform:translateX(calc(-50%));} /* slide exactly one set */
 }
+
+
+
 
 /* Duplicate the content dynamically */
 .scroll-content::before {
