@@ -43,13 +43,7 @@ visibility: visible;
 
 
 
-.lang-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:1.25rem;
-}
-/* dark-theme cards (same palette as rest of site) */
-/* grid layout stays the same */
+
 .lang-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
