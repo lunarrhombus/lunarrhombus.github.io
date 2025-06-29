@@ -41,39 +41,32 @@ visibility: visible;
 
 }
 
-.scroll-container {
-  display:flex;
-  width:max-content;           /* grow to fit badges ×2 */
-  animation: marquee 25s linear infinite;
+
+
+.lang-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:1.25rem;
 }
-
-.scroll-content {
-  display: flex;
-  animation: scroll-horizontal 30s linear infinite; /* Scroll smoothly for 30s, adjust time as needed */
+/* dark-theme cards (same palette as rest of site) */
+.lang-card{
+  background:#1e2228;        /* matches section background */
+  border:1px solid #2f343a;  /* subtle outline */
+  border-radius:1rem;
+  padding:1rem;
+  text-align:center;
+  color:#f1f3f4;             /* light text like headings */
 }
-
-/* Individual badge styles */
-.badge {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  font-size: 1.25rem;
-}
-
-@keyframes marquee{
-  from{transform:translateX(0);}
-  to  {transform:translateX(calc(-50%));} /* slide exactly one set */
-}
-
-
+.lang-card img{width:50px;height:50px;margin-bottom:.5rem;filter:brightness(0.9);}
+.lang-card h5{margin:0;font-size:1rem;font-weight:600;}
 
 
 /* Duplicate the content dynamically */
-.scroll-content::before {
+/* .scroll-content::before {
   content: '';
   display: inline-block;
   width: 100%; /* Duplicate the entire content */
-}
+} */
 /* smooth lift + glow on hover for linked cards */
 .card-link .card-cover   {transition:transform .25s ease, box-shadow .25s ease;}
 .card-link:hover .card-cover {

@@ -188,32 +188,35 @@
   <!-- Education -->
 
 <div class="container py-2" id="hanging-icons">
-    <h2 class="pb-2 border-bottom" id="education">Education</h2>
-    <div class="row g-4 py-4 row-cols-1 row-cols-lg-1">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0">
-
-        </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">M.S Aerospace Engineering</h3>
-          <h5 class="fs-5 text-body-emphasis">Penn State University</h5>
-          <p>Incomplete<br>Research: Microwave Ignition of Green Monopropellants (ASCENT)</p>
-
-        </div>
-
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0">
-
-        </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">B.S Aerospace Engineering</h3>
-          <h5 class="fs-5 text-body-emphasis">Penn State University</h5>
-          <p>May 2018<br>Minor: Information, Science & Technology for Aerospace Engineers</p>
-
+  <h2 class="pb-2 border-bottom" id="education">Education</h2>
+  <div class="row g-4 py-4 row-cols-1 row-cols-md-2">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="card-title">M.S Aerospace Engineering</h3>
+          <h5 class="card-subtitle mb-2 text-muted">Penn State University</h5>
+          <p class="card-text">
+            Incomplete<br>
+            Research: Microwave Ignition of Green Monopropellants (ASCENT)
+          </p>
         </div>
       </div>
-      
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="card-title">B.S Aerospace Engineering</h3>
+          <h5 class="card-subtitle mb-2 text-muted">Penn State University</h5>
+          <p class="card-text">
+            May 2018<br>
+            Minor: Information, Science & Technology for Aerospace Engineers
+          </p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
 
   <!-- Skills -->
 
@@ -307,27 +310,34 @@
 
 <div class="container">
   <h2 class="pb-2 border-bottom" id="languages">Languages</h2>
-  <div class="scroll-container">
-    <div class="scroll-content" id="langScroller">
-      <!-- Original content -->
-      <span class="badge">
-        <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" alt="">&nbsp C++ &nbsp
-      </span>
-      <span class="badge">
-        <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">&nbsp Javascript &nbsp
-      </span>
-      <span class="badge">
-        <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">&nbsp PHP &nbsp
-      </span>
-      <span class="badge">
-        <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">&nbsp SQL &nbsp
-      </span>
-      <span class="badge">
-        <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="">&nbsp Matlab &nbsp
-      </span>
-      <span class="badge">
-        <img class="rounded me-1" width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">&nbsp Python &nbsp
-      </span>
+  <div class="lang-grid">
+    <div class="lang-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" alt="">
+      <h5>C++</h5>
+    </div>
+    <div class="lang-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">
+      <h5>Javascript</h5>
+    </div>
+    <div class="lang-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">
+      <h5>PHP</h5>
+    </div>
+    <div class="lang-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">
+      <h5>SQL</h5>
+    </div>
+    <div class="lang-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="">
+      <h5>Matlab</h5>
+    </div>
+    <div class="lang-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
+      <h5>Python</h5>
+    </div>
+    <div class="lang-card">
+      <img src="./Images/Icons/doorsibmlogo-removebg-preview.png" alt="">
+      <h5>DOORS Extension Language (DXL)</h5>
     </div>
   </div>
 </div>
@@ -447,8 +457,9 @@
 
         <script>
 
-            const s = document.getElementById('langScroller');
-            s.append(...s.cloneNode(true).childNodes);
+            /* duplicate badges ONCE for looping */
+            const s=document.getElementById('langScroller');
+            s.innerHTML += s.innerHTML;   // append clone
 
             //Get the button
             let mybutton = document.getElementById("btn-back-to-top");
